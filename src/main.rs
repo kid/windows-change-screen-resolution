@@ -30,11 +30,11 @@ use druid::widget::{Button, Flex};
 use druid::{AppLauncher, PlatformError, Widget, WidgetExt, WindowDesc};
 
 const RESOLUTIONS: &[&[(u32, u32, u32, (i32, i32), Orientation)]] = &[
-    &[(3440, 1440, 100, (0, 0), Orientation::Zero)],
-    &[(3440, 1440, 60, (0, 0), Orientation::Zero)],
-    &[(2560, 1440, 100, (0, 0), Orientation::Zero)],
-    &[(2560, 1440, 60, (0, 0), Orientation::Zero)],
-    &[(3840, 2160, 60, (0, 0), Orientation::Zero)],
+    &[
+        (3840, 1600, 120, (0, 0), Orientation::Zero),
+        (1440, 2560, 120, (3840, -454), Orientation::Cw90),
+    ],
+    &[(2560, 1440, 120, (0, 0), Orientation::Zero)],
 ];
 
 fn main() -> Result<(), PlatformError> {
